@@ -12,25 +12,38 @@ class Solution
 {
     public static void sort012(int a[], int n)
     {
-        // code here 
-        int[] ar=new int[3];
-        Arrays.fill(ar,0);
-        for(int i = 0; i<a.length;i++)
+        for(int i = 0; i < n;i++)
         {
-            ar[a[i]]++;
-        }
-        int i = 0;
-        int k = 0;
-        while(i != a.length)
-        {
-            while(ar[k]>0)
+            int x = arr[i];
+            if(arr[i]<0)
             {
-                a[i] = k;
-                i++;
-                ar[k]--;
+                for(int j = i;j < n-1; j++)
+                {
+                    arr[j] = arr[j+1];
+                }
+                arr[n-1] = x;
+                // i--;
             }
-            k++;
-        }
+        }  
+        // code here 
+        // int[] ar=new int[3];
+        // Arrays.fill(ar,0);
+        // for(int i = 0; i<a.length;i++)
+        // {
+        //     ar[a[i]]++;
+        // }
+        // int i = 0;
+        // int k = 0;
+        // while(i != a.length)
+        // {
+        //     while(ar[k]>0)
+        //     {
+        //         a[i] = k;
+        //         i++;
+        //         ar[k]--;
+        //     }
+        //     k++;
+        // }
     }
 }
 
